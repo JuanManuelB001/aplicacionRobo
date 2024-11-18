@@ -71,22 +71,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="20dp">
                 <Button
-                    android:id="@+id/btnIniciarSesion"
+                    android:id="@+id/btnUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
-                    android:text="Iniciar" />
+                    android:text="Usuario" />
                 <Button
-                    android:id="@+id/btnCrearUsuario"
+                    android:id="@+id/btnContacto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
-                    android:text="Crear" />
+                    android:text="Contacto" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

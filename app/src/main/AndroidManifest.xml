@@ -31,7 +31,16 @@
         <activity
             android:name=".loginActivity"
             android:exported="true">
-
+        </activity>
+        <!--USUARIO ACTIVITY -->
+        <activity
+            android:name=".UsuarioActivity"
+            android:exported="true">
+        </activity>
+        <!--CONTACTO ACTIVITY -->
+        <activity
+            android:name=".ContactoActivity"
+            android:exported="true">
         </activity>
     </application>
 

@@ -47,11 +47,11 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
         comprobarSesion();
 
         //BOTON USUARIO
-        btncrearusuario= findViewById(R.id.btnCrearUsuario);
+        btncrearusuario= findViewById(R.id.btnUsuario);
         btncrearusuario.setOnClickListener(this);
 
         //BOTON INICIAR SESION
-        btniniciarsesion= findViewById(R.id.btnIniciarSesion);
+        btniniciarsesion= findViewById(R.id.btnContacto);
         btniniciarsesion.setOnClickListener(this);
     }
     public void comprobarSesion(){
@@ -69,18 +69,18 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
     }
     @Override
     public void onClick(View view) {
-        /*
+
         Intent intent = new Intent();
-        if (view.getId() == R.id.btnCrearUsuario) {
-            intent = new Intent(MainActivity.this, registrarse.class);
+        if (view.getId() == R.id.btnUsuario) {
+            intent = new Intent(inicioActivity.this, UsuarioActivity.class);
             startActivity(intent);
 
-        }else if(view.getId() == R.id.btnIniciarSesion){
-            intent = new Intent(MainActivity.this, IniciarSesionActivity.class);
+        }else if(view.getId() == R.id.btnContacto){
+            intent = new Intent(inicioActivity.this, ContactoActivity.class);
             startActivity(intent);
         }
 
-         */
+
     }
 
 }

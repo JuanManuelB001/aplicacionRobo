@@ -14,7 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 
 import com.example.aplicacionrobo.databinding.ActivityLoginBinding;
 
-public class crearUsuarioActivity extends AppCompatActivity implements View.OnClickListener {
+public class UsuarioActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityLoginBinding binding;
@@ -24,15 +24,14 @@ public class crearUsuarioActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
 
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.login), (v, insets) -> {
+        setContentView(R.layout.activity_usuario);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.usuario_Act), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        btnbutton = findViewById(R.id.button);
-        btnbutton.setOnClickListener(this);
+
     }
 
     @Override

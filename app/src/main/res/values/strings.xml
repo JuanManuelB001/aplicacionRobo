@@ -52,4 +52,9 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+    <string name="hint_registrarse">Registrarse</string>
+    <string name="hint_iniciarSesion">Iniciar Sesión</string>
+    <string name="hint_contrase_a">Ingrese Contraseña</string>
+    <string name="hint_usuario">Ingrese Usuario</string>
 </resources>
