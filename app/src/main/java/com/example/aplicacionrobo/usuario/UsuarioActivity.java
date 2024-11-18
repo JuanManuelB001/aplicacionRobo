@@ -68,28 +68,32 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
         if(view.getId() == R.id.btnRegistrarseUsuario){
             Intent intent= new Intent(this, RegistroUsuarioActivity.class);
             startActivity(intent);
-        }else if(view.getId() == R.id.btnIniciarSesionUsuario){
+        }else if(view.getId() == R.id.btnIniciarSesionUsuario) {
             String email = txtcorreo.getText().toString();
             String password = txtcontrasena.getText().toString();
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Ingrese Usuario/Contaseña", Toast.LENGTH_SHORT).show();
 
-            mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (email.isEmpty() || password.isEmpty()) {
-                                Toast.makeText(UsuarioActivity.this, "Ingrese Correo y Contraseña", Toast.LENGTH_LONG).show();
-                            } else {
-                                if (task.isSuccessful()) {
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    updateUI(user);
+            } else {
+                mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (email.isEmpty() || password.isEmpty()) {
+                                    Toast.makeText(UsuarioActivity.this, "Ingrese Correo y Contraseña", Toast.LENGTH_LONG).show();
                                 } else {
-                                    Toast.makeText(UsuarioActivity.this, "Usuario o Contraseña Incorrectos.",
-                                            Toast.LENGTH_SHORT).show();
-                                    updateUI(null);
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        updateUI(user);
+                                    } else {
+                                        Toast.makeText(UsuarioActivity.this, "Usuario o Contraseña Incorrectos.",
+                                                Toast.LENGTH_SHORT).show();
+                                        updateUI(null);
+                                    }
                                 }
                             }
-                        }
-                    });
+                        });
+            }
         }
     }
     private void updateUI(FirebaseUser user) {

@@ -65,4 +65,5 @@ dependencies {
     implementation(libs.play.services.location)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(kotlin("script-runtime"))
 }
