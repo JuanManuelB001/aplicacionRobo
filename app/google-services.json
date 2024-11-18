@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "694055475188",
+    "project_id": "aplicacionrobo",
+    "storage_bucket": "aplicacionrobo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694055475188:android:fe237edf3f3b854e900ba1",
+        "android_client_info": {
+          "package_name": "com.example.aplicacionrobo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgiv9SmEJpwkyZeGbh1OuhZ0dK_2VHT2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

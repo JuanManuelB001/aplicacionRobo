@@ -13,10 +13,18 @@
         android:theme="@style/Theme.AplicacionRobo"
         tools:targetApi="31">
         <activity
+            android:name=".inicioActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AplicacionRobo" />
+        <!-- MainActivity -->
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AplicacionRobo.NoActionBar">
+            android:theme="@style/Theme.AplicacionRobo.NoActionBar"></activity> <!-- loginActivity with MAIN and LAUNCHER intent filter -->
+        <activity
+            android:name=".loginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
