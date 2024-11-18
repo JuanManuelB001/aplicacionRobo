@@ -55,12 +55,10 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
         Object firebaseUser = mAuth.getCurrentUser();
         if( firebaseUser != null){
             Toast.makeText(this,"si sesión",Toast.LENGTH_SHORT).show();
-
             /*intent = new Intent(this, MainActivity.class);
             startActivity(intent);
 
                 */
-
         }else{
             Toast.makeText(this,"No sesesión ", Toast.LENGTH_SHORT).show();
 
