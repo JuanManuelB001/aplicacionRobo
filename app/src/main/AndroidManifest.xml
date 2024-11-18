@@ -12,24 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionRobo"
         tools:targetApi="31">
+        <!-- INICIO ACTIVIDAD -->
         <activity
             android:name=".inicioActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AplicacionRobo" />
-        <!-- MainActivity -->
-        <activity
-            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AplicacionRobo.NoActionBar"></activity> <!-- loginActivity with MAIN and LAUNCHER intent filter -->
-        <activity
-            android:name=".loginActivity"
-            android:exported="true">
+            android:theme="@style/Theme.AplicacionRobo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AplicacionRobo.NoActionBar" /> <!-- loginActivity with MAIN and LAUNCHER intent filter -->
+        <activity
+            android:name=".loginActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
