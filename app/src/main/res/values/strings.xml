@@ -52,9 +52,19 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-
+    <!-- ACTIVITY USUARIO/CONTACTO -->
     <string name="hint_registrarse">Registrarse</string>
     <string name="hint_iniciarSesion">Iniciar Sesión</string>
     <string name="hint_contrase_a">Ingrese Contraseña</string>
     <string name="hint_usuario">Ingrese Usuario</string>
+
+    <!-- ACTIVITY REGISTROUSUARIO  -->
+    <string name="hint_nombre">Ingrese su Nombre</string>
+    <string name="hint_telefono">Ingrese su Telefono</string>
+    <string name="hint_correo_electronico">Ingrese su Correo Electronico</string>
+    <string name="hint_contrasena">Ingrese Contraseña</string>
+    <string name="hint_confirmar_contrasena">Confirmar Contraseña</string>
+
+    <!-- BOTONES REGISTRO -->
+    <string name="hint_siguiente">Siguiente</string>
 </resources>

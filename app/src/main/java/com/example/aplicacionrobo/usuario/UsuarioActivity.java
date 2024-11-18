@@ -1,4 +1,4 @@
-package com.example.aplicacionrobo;
+package com.example.aplicacionrobo.usuario;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.ui.AppBarConfiguration;
 
-import com.example.aplicacionrobo.databinding.ActivityLoginBinding;
+import com.example.aplicacionrobo.MainActivity;
+import com.example.aplicacionrobo.R;
+
 
 public class UsuarioActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityLoginBinding binding;
-    private Button btnbutton;
+    private Button btnsesion, btnregistrarse;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -30,14 +31,20 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //BOTON INICIO SESION
+        btnsesion = findViewById(R.id.btnIniciarSesionUsuario);
+        btnsesion.setOnClickListener(this);
+        //BOTON REGISTRO
+        btnregistrarse = findViewById(R.id.btnRegistrarseUsuario);
+        btnregistrarse.setOnClickListener(this);
 
 
     }
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.button){
-            Intent intent= new Intent(this, MainActivity.class);
+        if(view.getId() == R.id.btnRegistrarseUsuario){
+            Intent intent= new Intent(this, RegistroUsuarioActivity.class);
             startActivity(intent);
         }
     }

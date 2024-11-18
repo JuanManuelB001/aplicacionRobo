@@ -5,7 +5,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginActivity">
+    tools:context=".usuario.RegistroUsuarioActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

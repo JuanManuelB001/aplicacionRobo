@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/contacto_act"
     android:fitsSystemWindows="true"
-    tools:context=".ContactoActivity">
+    tools:context=".Contacto.ContactoActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtUsuario" />
 
             <Button
-                android:id="@+id/btnIniciarSesion"
+                android:id="@+id/btnIniciarSesionContacto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -92,7 +92,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtCon" />
 
             <Button
-                android:id="@+id/btnRegistrarse"
+                android:id="@+id/btnRegistrarseContacto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"

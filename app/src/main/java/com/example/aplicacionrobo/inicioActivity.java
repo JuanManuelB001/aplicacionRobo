@@ -4,7 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.aplicacionrobo.Contacto.ContactoActivity;
+import com.example.aplicacionrobo.usuario.UsuarioActivity;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +17,7 @@ import android.widget.Toast;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.example.aplicacionrobo.databinding.ActivityInicioBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class inicioActivity extends AppCompatActivity  implements  View.OnClickListener{
@@ -59,8 +55,11 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
         Object firebaseUser = mAuth.getCurrentUser();
         if( firebaseUser != null){
             Toast.makeText(this,"si sesión",Toast.LENGTH_SHORT).show();
-            intent = new Intent(this, MainActivity.class);
+
+            /*intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+
+                */
 
         }else{
             Toast.makeText(this,"No sesesión ", Toast.LENGTH_SHORT).show();

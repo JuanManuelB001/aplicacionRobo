@@ -1,4 +1,4 @@
-package com.example.aplicacionrobo;
+package com.example.aplicacionrobo.Contacto;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,12 +12,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.ui.AppBarConfiguration;
 
-import com.example.aplicacionrobo.databinding.ActivityLoginBinding;
+import com.example.aplicacionrobo.MainActivity;
+import com.example.aplicacionrobo.R;
 
 public class ContactoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityLoginBinding binding;
+
     private Button btnbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {

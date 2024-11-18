@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/usuario_Act"
-    tools:context=".UsuarioActivity"
+    tools:context=".usuario.UsuarioActivity"
     >
 
     <RelativeLayout
@@ -73,7 +73,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/txtUsuario" />
 
                 <Button
-                    android:id="@+id/btnIniciarSesion"
+                    android:id="@+id/btnIniciarSesionUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -86,7 +86,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/txtCon" />
 
                 <Button
-                    android:id="@+id/btnRegistrarse"
+                    android:id="@+id/btnRegistrarseUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
