@@ -4,9 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.aplicacionrobo.MainActivity;
 import com.example.aplicacionrobo.R;
-import com.example.aplicacionrobo.inicioActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -27,7 +25,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -74,7 +71,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity implements View.O
         txtconfirmarcontrasena = findViewById(R.id.txtConfirmarContrasena);
 
         //CONFIGURACION BOTON GUARDAR
-        btnguardar = findViewById(R.id.btnGuardar);
+        btnguardar = findViewById(R.id.btnSiguiente);
         // CREAR ACTION LISTENER PARA EL BOTON
         btnguardar.setOnClickListener(this);
 
@@ -91,7 +88,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity implements View.O
 
 
 
-        if (view.getId() == R.id.btnGuardar) { // ESCUCHAR EL EVENTO BOTON GUARDAR
+        if (view.getId() == R.id.btnSiguiente) { // ESCUCHAR EL EVENTO BOTON GUARDAR
             // REVISAR QUE LOS EDIT TEXT NO ESTEN VACIOS
             if (nombre.isEmpty() || telefono.isEmpty() || correo_electronico.isEmpty()) {
                 Toast.makeText(this, "Por favor, ingrese todos los datos", Toast.LENGTH_SHORT).show();

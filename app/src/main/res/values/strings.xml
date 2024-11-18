@@ -64,7 +64,11 @@
     <string name="hint_correo_electronico">Ingrese su Correo Electronico</string>
     <string name="hint_contrasena">Ingrese Contraseña</string>
     <string name="hint_confirmar_contrasena">Confirmar Contraseña</string>
+    <!--CONTACTO EMERGENCIA -->
+    <string name="hint_agregarContacto">Agregar Nuevo Contacto</string>
 
     <!-- BOTONES REGISTRO -->
     <string name="hint_siguiente">Siguiente</string>
+
+
 </resources>
