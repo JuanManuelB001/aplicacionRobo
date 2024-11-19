@@ -67,7 +67,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <EditText
-                android:id="@+id/txtCon"
+                android:id="@+id/txtConContacto"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="32dp"
