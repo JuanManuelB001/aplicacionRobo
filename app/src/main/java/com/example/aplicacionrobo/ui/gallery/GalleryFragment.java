@@ -9,8 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
+import com.example.aplicacionrobo.R;
+import com.example.aplicacionrobo.databinding.ActivityMain2Binding;
 import com.example.aplicacionrobo.databinding.FragmentGalleryBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class GalleryFragment extends Fragment {
 
@@ -27,7 +34,13 @@ public class GalleryFragment extends Fragment {
         final TextView textView = binding.textGallery;
         galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
+
     }
+
+
+
+
+
 
     @Override
     public void onDestroyView() {

@@ -12,41 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionRobo"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2" />
         <!-- INICIO ACTIVIDAD -->
         <activity
             android:name=".inicioActivity"
             android:exported="true"
-            android:theme="@style/Theme.AplicacionRobo" >
+            android:theme="@style/Theme.AplicacionRobo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- MainActivity -->
+        </activity> <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AplicacionRobo.NoActionBar" /> <!-- loginActivity with MAIN and LAUNCHER intent filter -->
         <activity
             android:name=".usuario.RegistroUsuarioActivity"
-            android:exported="true">
-        </activity>
-        <!--USUARIO ACTIVITY -->
+            android:exported="true"></activity> <!-- USUARIO ACTIVITY -->
         <activity
             android:name=".usuario.UsuarioActivity"
-            android:exported="true">
-        </activity>
-        <!--CONTACTO ACTIVITY -->
+            android:exported="true"></activity> <!-- CONTACTO ACTIVITY -->
         <activity
             android:name=".Contacto.ContactoActivity"
-            android:exported="true">
-        </activity>
-        <!--REGISTRO CONTACTO ACTIVITY -->
+            android:exported="true"></activity> <!-- REGISTRO CONTACTO ACTIVITY -->
         <activity
             android:name=".usuario.RegistroContactoActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

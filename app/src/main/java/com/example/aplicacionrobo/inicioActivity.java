@@ -25,7 +25,9 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
 
     private Button btncrearusuario;
     private Button btniniciarsesion;
+
     private FirebaseAuth mAuth;
+    private Button btncrearusuario2;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,10 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
         //BOTON USUARIO
         btncrearusuario= findViewById(R.id.btnUsuario);
         btncrearusuario.setOnClickListener(this);
+
+        btncrearusuario2= findViewById(R.id.btnUsuario2);
+        btncrearusuario2.setOnClickListener(this);
+
 
         //BOTON INICIAR SESION
         btniniciarsesion= findViewById(R.id.btnContacto);
@@ -74,6 +80,9 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
 
         }else if(view.getId() == R.id.btnContacto){
             intent = new Intent(inicioActivity.this, ContactoActivity.class);
+            startActivity(intent);
+        }else if(view.getId() == R.id.btnUsuario2){
+            intent = new Intent(inicioActivity.this, MainActivity2.class);
             startActivity(intent);
         }
 
