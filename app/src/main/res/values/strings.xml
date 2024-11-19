@@ -7,9 +7,13 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Ajustes</string>
 
-    <string name="menu_home">Home</string>
+    <!-- VIEW FRAGMENTS -->
+    <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="bottom_mapa">Mapa</string>
+    <string name="bottom_eps_32">Eps 32</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

@@ -41,7 +41,10 @@ public class HomeFragment extends Fragment {
                 selectedFragment = new NotificationsFragment(); // Define este Fragment
             }else if(item.getItemId() == R.id.nav_search){
                 selectedFragment = new DashboardFragment(); // Define este Fragment
-            }else if(item.getItemId() == R.id.nav_profile){
+            }else if(item.getItemId() == R.id.nav_mapa){
+                selectedFragment = new SlideshowFragment();
+            }
+            else if(item.getItemId() == R.id.nav_profile){
                 selectedFragment = new SlideshowFragment(); // Define este Fragment
             }
             if (selectedFragment != null) {
