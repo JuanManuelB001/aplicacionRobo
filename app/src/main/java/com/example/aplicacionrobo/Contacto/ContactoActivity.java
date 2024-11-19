@@ -19,7 +19,7 @@ public class ContactoActivity extends AppCompatActivity implements View.OnClickL
 
     private AppBarConfiguration appBarConfiguration;
 
-    private Button btnbutton;
+    private Button btnSesion, btnCrearContacto;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -31,15 +31,24 @@ public class ContactoActivity extends AppCompatActivity implements View.OnClickL
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // BOTONES
+        btnSesion = findViewById(R.id.btnIniciarSesionContacto);
+        btnSesion.setOnClickListener(this);
 
+        btnCrearContacto = findViewById(R.id.btnRegistrarseContacto);
+        btnCrearContacto.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.button){
+        if(view.getId() == R.id.btnIniciarSesionContacto){
             Intent intent= new Intent(this, MainActivity.class);
+            //startActivity(intent);
+        }else if(view.getId() == R.id.btnRegistrarseContacto){
+            Intent intent= new Intent(this, RegistroContactoActivity.class);
             startActivity(intent);
+
         }
     }
 }

@@ -48,7 +48,7 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
         btncrearusuario= findViewById(R.id.btnUsuario);
         btncrearusuario.setOnClickListener(this);
 
-        btncrearusuario2= findViewById(R.id.btnUsuario2);
+        btncrearusuario2= findViewById(R.id.btnContacto);
         btncrearusuario2.setOnClickListener(this);
 
 
@@ -80,9 +80,6 @@ public class inicioActivity extends AppCompatActivity  implements  View.OnClickL
 
         }else if(view.getId() == R.id.btnContacto){
             intent = new Intent(inicioActivity.this, ContactoActivity.class);
-            startActivity(intent);
-        }else if(view.getId() == R.id.btnUsuario2){
-            intent = new Intent(inicioActivity.this, MainActivity2.class);
             startActivity(intent);
         }
 

@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.7"
-                android:text="Por favor ingrese sus datos" />
+                android:text="@string/informacionIndex" />
 
             <!-- LinearLayout para los botones justo debajo del TextView -->
             <LinearLayout
@@ -83,15 +83,6 @@
                     android:layout_marginEnd="32dp"
                     android:text="Usuario" />
 
-                <Button
-                    android:id="@+id/btnUsuario2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="32dp"
-                    android:text="Usuario" />
 
                 <Button
                     android:id="@+id/btnContacto"

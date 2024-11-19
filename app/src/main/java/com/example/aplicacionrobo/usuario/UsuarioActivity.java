@@ -26,6 +26,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import android.os.Bundle;
+import android.text.InputType;
+import android.view.MotionEvent;
+import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class UsuarioActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
@@ -36,7 +42,7 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
     private static final String TAG = "UsuarioActivity";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         EdgeToEdge.enable(this);
@@ -59,8 +65,38 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
         //BOTON REGISTRO
         btnregistrarse = findViewById(R.id.btnRegistrarseUsuario);
         btnregistrarse.setOnClickListener(this);
+        ////
+        EditText txtCon = findViewById(R.id.txtCon);
 
+        // Variable para rastrear el estado de visibilidad
+        final boolean[] isPasswordVisible = {false};
 
+        // Configura el OnTouchListener para detectar clics en el ícono
+        txtCon.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // Comprueba si el clic fue en el área del drawableEnd
+                if (event.getRawX() >= (txtCon.getRight() - txtCon.getCompoundPaddingEnd())) {
+                    // Alterna la visibilidad de la contraseña
+                    if (isPasswordVisible[0]) {
+                        // Ocultar contraseña
+                        txtCon.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                        txtCon.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_visiblility_off, 0);
+                    } else {
+                        // Mostrar contraseña
+                        txtCon.setInputType(InputType.TYPE_CLASS_TEXT);
+                        txtCon.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_remove, 0);
+                    }
+                    // Mueve el cursor al final
+                    txtCon.setSelection(txtCon.getText().length());
+                    // Alterna el estado
+                    isPasswordVisible[0] = !isPasswordVisible[0];
+                    return true;
+                }
+            }
+            return false;
+        });
+
+        ///
     }
 
     @Override
@@ -75,6 +111,8 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
                 Toast.makeText(this, "Ingrese Usuario/Contaseña", Toast.LENGTH_SHORT).show();
 
             } else {
+                Toast.makeText(this,"Espere un Momento",Toast.LENGTH_SHORT).show();
+                btnsesion.setEnabled(false);
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -94,7 +132,9 @@ public class UsuarioActivity extends AppCompatActivity implements View.OnClickLi
                             }
                         });
             }
+            btnsesion.setEnabled(true);
         }
+
     }
     private void updateUI(FirebaseUser user) {
         if (user != null) {

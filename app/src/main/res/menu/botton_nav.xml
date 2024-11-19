@@ -6,15 +6,12 @@
         android:icon="@drawable/ic_home"
         android:title="Inicio"
         />
-
-
     <item
         android:id="@+id/op_mapa"
         android:icon="@drawable/ic_mapa"
         android:title="Mapa"
         />
     <!--android:enable="false" -->
-
     <item
         android:id="@+id/op_conf_eps_32"
         android:icon="@drawable/ic_eps_32"
